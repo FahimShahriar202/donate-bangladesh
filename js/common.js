@@ -5,8 +5,9 @@
 // feni-amount  feni-input  btn-donate-now-feni
 // quota-amount quota-input  btn-donate-now-
 
-
+// blog work
 document.getElementById('blog').addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = "/blog.html";
 });
+// blog button work done
