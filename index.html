@@ -58,7 +58,7 @@
           <!-- balance -->
           <div class="flex items-center">
             <img src="assets/coin.png" alt="">
-            <p class=" ml-2">5500</p>
+            <p id="balance" class=" ml-2">5500</p>
             <p>BDT</p>
           </div>
           <!-- balance -->
@@ -81,8 +81,8 @@
     <section class="mt-5 ">
       <!-- buttons -->
       <div class="flex justify-center gap-3 mb-4">
-        <button class="btn-donation btn btn-success font-bold">Donation</button>
-        <button class="btn-history btn btn-active font-bold">History</button>
+        <button id="btn-donation" class=" btn btn-success font-bold">Donation</button>
+        <button id="btn-history" class=" btn btn-active font-bold">History</button>
       </div>
       <!-- buttons end -->
 
@@ -96,7 +96,7 @@
         <div class="px-2 py-2">
           <div class="w-1/5 flex bg-slate-200 rounded-md justify-center align-middle">
             <p><img src="assets/coin.png" alt=""></p>
-            <p class="noakhali-amount">0</p>
+            <p id="noakhali-amount" class="noakhali-amount">0</p>
             <p>BDT</p>
           </div>
 
@@ -114,13 +114,13 @@
           <!-- input field -->
 
           <div class="mt-2 mb-2 text-black w-full">
-            <form class="w-full" action="">
+            <form  class="w-full" action="">
 
-              <input class="w-full border noakhali-input" type="number" placeholder="Enter Amount" name="" id="">
+              <input id="noakhali-input" class="w-full border " type="number" placeholder="Enter Amount" name="" id="">
             </form><br>
 
             <!-- donate now button -->
-            <button class="btn w-full btn-donate-now-noakhali btn btn-success font-bold" onclick="my_modal_5.showModal()">Donate Now</button>
+            <button id="btn-donate-now-noakhali" class="btn w-full  btn btn-success font-bold" onclick="my_modal_5.showModal()">Donate Now</button>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
               <div class="modal-box text-center">
                 <div class="font-bold text-2xl">Congrats!</div>
@@ -130,7 +130,7 @@
                 <div class="modal-action flex justify-center">
                   <form method="dialog ">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn btn-active">close confirmation</button>
+                    <button id="noa-close" class="btn btn-active">close confirmation</button>
                   </form>
                 </div>
               </div>
@@ -199,7 +199,7 @@
                 <div class="modal-action flex justify-center">
                   <form method="dialog ">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn btn-active">close confirmation</button>
+                    <button id="feni-close" class="btn btn-active">close confirmation</button>
                   </form>
                 </div>
               </div>
@@ -261,7 +261,7 @@
                 <div class="modal-action flex justify-center">
                   <form method="dialog ">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn btn-active">close confirmation</button>
+                    <button id="quota-close" class="btn btn-active">close confirmation</button>
                   </form>
                 </div>
               </div>
