@@ -117,6 +117,11 @@ const btnDonation = document.getElementById('btn-donation');
 // noakhali
 document.getElementById("btn-donate-now-noakhali").addEventListener("click",function(event){
   event.preventDefault();
+
+
+  
+
+
   const noaVal = getInputValueById("noakhali-input");
 
   if (parseFloat(noaVal)>0 || typeof(noaVal)==="number") {
