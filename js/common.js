@@ -2,7 +2,7 @@
 
 // noakhali-amount  btn-donate-now noakhali-input
 // feni-amount  feni-input  btn-donate-now-feni
-// quota-amount quota-input  btn-donate-now-
+// quota-amount quota-input  btn-donate-now-quota
 
 
 // close button refresh off
@@ -34,6 +34,8 @@ function getInputValueById(id) {
 // ger input value by id common function done
 
 
+
+
 // ger input innertext by id common function
 function getInputTextById(id) {
     
@@ -45,12 +47,33 @@ function getInputTextById(id) {
 
 
 
+
+
 // blog work
 document.getElementById('blog').addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = "/blog.html";
 });
 // blog button work done
+
+
+
+// history work
+document.getElementById('btn-history').addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = "/history.html";
+});
+// history done
+
+
+// donation work
+document.getElementById('btn-donation2').addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = "/index.html";
+});
+// donation done
+
+
 
 
 
@@ -136,22 +159,68 @@ document.getElementById("btn-donate-now-noakhali").addEventListener("click",func
 
 
 });
-  // 
-  // 
-  // console.log(noaVal)
-  // if (parseFloat(noaVal)>0 && typeof(noaVal)==="number") {
-  //   const noaAmount = getInputValueById("noakhali-amount").innerText;
-  //   
-  //   getInputValueById("noakhali-amount").innerText = newNoaAmount;
 
 
-//   }
-
-//   else{
-    
-
-//   }
 
 
-// })
+// feni
+document.getElementById("btn-donate-now-feni").addEventListener("click", function(event) {
+  event.preventDefault();
+  const feniVal = getInputValueById("feni-input");
+
+  if (parseFloat(feniVal) > 0 || typeof(feniVal) === "number") {
+    const feniAmount = getInputTextById("feni-amount");
+
+    const newFeniAmount = parseFloat(feniVal) + parseFloat(feniAmount);
+
+    // updated amount
+    document.getElementById("feni-amount").innerText = newFeniAmount;
+
+    // updated total amount
+    const totalAmount = parseFloat(getInputTextById("balance"));
+
+    if (totalAmount > newFeniAmount) {
+      const newTotal = parseFloat(totalAmount) - parseFloat(newFeniAmount);
+      // console.log(newTotal);
+
+      document.getElementById("balance").innerText = newTotal;
+    } else {
+      console.log("error");
+    }
+  } else {
+    console.log("error");
+  }
+});
+
+
+
+// quota
+document.getElementById("btn-donate-now-quota").addEventListener("click", function(event) {
+  event.preventDefault();
+  const quotaVal = getInputValueById("quota-input");
+
+  if (parseFloat(quotaVal) > 0 || typeof(quotaVal) === "number") {
+    const quotaAmount = getInputTextById("quota-amount");
+
+    const newquotaAmount = parseFloat(quotaVal) + parseFloat(quotaAmount);
+
+    // updated amount
+    document.getElementById("quota-amount").innerText = newquotaAmount;
+
+    // updated total amount
+    const totalAmount = parseFloat(getInputTextById("balance"));
+
+    if (totalAmount > newquotaAmount) {
+      const newTotal = parseFloat(totalAmount) - parseFloat(newquotaAmount);
+      // console.log(newTotal);
+
+      document.getElementById("balance").innerText = newTotal;
+    } else {
+      console.log("error");
+    }
+  } else {
+    console.log("error");
+  }
+});
+
 
