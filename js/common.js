@@ -60,7 +60,12 @@ function getInputTextById(id) {
 // ger input innertext by id common function done
 
 
+// sticky navbar
+window.addEventListener(scroll,function(){
+  const header = document.querySelector("header");
+  header.classList.toggle("sticky")
 
+});
 
 
 // blog work
@@ -74,10 +79,7 @@ document.getElementById('blog-btn2').addEventListener('click', function(event){
 
 
 // // history work
-// document.getElementById('btn-history').addEventListener('click', function(event) {
-//   event.preventDefault();
-//   window.location.href = "/history.html";
-// });
+
 // // history done
 
 
