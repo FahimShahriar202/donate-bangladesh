@@ -72,7 +72,7 @@ window.addEventListener(scroll,function(){
 
 document.getElementById('blog-btn2').addEventListener('click', function(event){
   event.preventDefault();
-  window.location.href = "/blog.html";
+  window.location.href = "blog.html";
 });
 // blog button work done
 
