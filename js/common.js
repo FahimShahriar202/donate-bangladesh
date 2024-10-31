@@ -79,6 +79,54 @@ document.getElementById('blog-btn2').addEventListener('click', function(event){
 
 
 // // history work
+const donationHistorySection = document.getElementById("history-section")
+// noakhali
+document.getElementById("btn-donate-now-noakhali").addEventListener("click", function(event){
+
+  event.preventDefault();
+  
+
+  const noakhaliInpVal = document.getElementById("noakhali-input").value;
+
+  const noaParaNew = document.createElement('p');
+  noaParaNew.textContent = `\nDonated amount: ${noakhaliInpVal} BDT in Noakhali`;
+  
+  donationHistorySection.appendChild(noaParaNew);
+
+});
+
+
+// feni 
+document.getElementById("btn-donate-now-feni").addEventListener("click", function(event){
+  event.preventDefault();
+  
+
+  const feniInpVal = document.getElementById("feni-input").value;
+
+  const feniParaNew = document.createElement('p');
+  feniParaNew.textContent = `\nDonated amount: ${feniInpVal} BDT in feni `;
+
+  donationHistorySection.appendChild(feniParaNew);
+
+
+})
+
+
+// quota
+document.getElementById("btn-donate-now-quota").addEventListener("click", function(event){
+  event.preventDefault();
+  
+
+  const quotaInpVal = document.getElementById("quota-input").value;
+
+  const quotaParaNew = document.createElement('p');
+  quotaParaNew.textContent = `\nDonated amount: ${quotaInpVal} BDT in Quota section `;
+
+  donationHistorySection.appendChild(quotaParaNew);
+
+
+})
+
 
 // // history done
 
