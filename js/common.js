@@ -84,7 +84,31 @@ document.getElementById('blog-btn2').addEventListener('click', function(event){
 
 
 
+// toggle donation and history section
+// Select buttons and sections
+const donationButton = document.getElementById('btn-donation');
+const historyButton = document.getElementById('btn-history');
+const donationSection = document.getElementById('donation-section');
+const historySection = document.getElementById('history-section');
 
+
+
+
+
+donationButton.addEventListener('click', function()  {
+  donationSection.classList.remove('hidden'); // Show donation section
+  historySection.classList.add('hidden');     // Hide history section
+});
+
+
+
+historyButton.addEventListener('click', function() {
+  historySection.classList.remove('hidden');  // Show history section
+  donationSection.classList.add('hidden');    // Hide donation section
+});
+
+
+// toggle donation and history section done
 
 
 
